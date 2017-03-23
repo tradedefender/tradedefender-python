@@ -10,4 +10,5 @@ setup(name='tradedefender',
       author_email='cj@tradedefender.com',
       license='MIT',
       packages=['tradedefender'],
+      install_requires=['requests'],
       zip_safe=False)
