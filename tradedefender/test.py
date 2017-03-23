@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 import json
 import datetime
 import tradedefender
@@ -77,5 +78,9 @@ def execute_test(api_key):
     return(testResults)
 
 if __name__ == "__main__":
-    api_key = input("Enter App Key: ")
+    if(sys.version_info[0]>=3):
+        api_key = input("Enter App Key: ")
+    else:
+        api_key = raw_input("Enter App Key: ")
+
     print(execute_test(api_key))
