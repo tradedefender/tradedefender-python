@@ -1,0 +1,13 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+tradedefender/__init__.py
+tradedefender/test.py
+tradedefender/tradedefender.py
+tradedefender.egg-info/PKG-INFO
+tradedefender.egg-info/SOURCES.txt
+tradedefender.egg-info/dependency_links.txt
+tradedefender.egg-info/not-zip-safe
+tradedefender.egg-info/requires.txt
+tradedefender.egg-info/top_level.txt
