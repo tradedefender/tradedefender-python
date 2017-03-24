@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='tradedefender',
-      version='0.1',
+      version='0.4',
       description='Interface for Trade Defender financial data',
       url='https://tradedefender.com',
       author='CJ Black',
