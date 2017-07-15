@@ -68,26 +68,30 @@ def stockprice(app_key=False, symbol=False):
 
 
 def histpricedata(app_key=False, symbol=False, start_date=False,
-                  end_date=False, order_by=False, columns=False):
+                  end_date=False, order_by=False, columns=False,
+                  limit=False):
     host = BASE_URL + "/" + str(symbol) + "/hist-price-data"
     params = {"api_key": app_key,
               "start_date": start_date,
               "end_date": end_date,
               "order_by": order_by,
-              "columns": columns}
+              "columns": columns,
+              "limit": limit}
     request_url = parameterize(host, params)
     response = make_request(request_url)
     return(response)
 
 
 def histestimates(app_key=False, symbol=False, start_date=False,
-                  end_date=False, order_by=False, columns=False):
+                  end_date=False, order_by=False, columns=False,
+                  limit=False):
     host = BASE_URL + "/" + str(symbol) + "/hist-earnings-and-estimates"
     params = {"api_key": app_key,
               "start_date": start_date,
               "end_date": end_date,
               "order_by": order_by,
-              "columns": columns}
+              "columns": columns,
+              "limit": limit}
     request_url = parameterize(host, params)
     response = make_request(request_url)
     return(response)
@@ -95,14 +99,15 @@ def histestimates(app_key=False, symbol=False, start_date=False,
 
 def balancesheets(app_key=False, symbol=False, start_date=False,
                   end_date=False, order_by=False, columns=False,
-                  period_type=False):
+                  period_type=False, limit=False):
     host = BASE_URL + "/" + str(symbol) + "/hist-balance-sheets"
     params = {"api_key": app_key,
               "start_date": start_date,
               "end_date": end_date,
               "order_by": order_by,
               "columns": columns,
-              "period_type": period_type}
+              "period_type": period_type,
+              "limit": limit}
     request_url = parameterize(host, params)
     response = make_request(request_url)
     return(response)
@@ -110,14 +115,15 @@ def balancesheets(app_key=False, symbol=False, start_date=False,
 
 def cashflowstatements(app_key=False, symbol=False, start_date=False,
                        end_date=False, order_by=False, columns=False,
-                       period_type=False):
+                       period_type=False, limit=False):
     host = BASE_URL + "/" + str(symbol) + "/hist-cash-flow-statements"
     params = {"api_key": app_key,
               "start_date": start_date,
               "end_date": end_date,
               "order_by": order_by,
               "columns": columns,
-              "period_type": period_type}
+              "period_type": period_type,
+              "limit": limit}
     request_url = parameterize(host, params)
     response = make_request(request_url)
     return(response)
@@ -125,14 +131,15 @@ def cashflowstatements(app_key=False, symbol=False, start_date=False,
 
 def incomestatements(app_key=False, symbol=False, start_date=False,
                      end_date=False, order_by=False, columns=False,
-                     period_type=False):
+                     period_type=False, limit=False):
     host = BASE_URL + "/" + str(symbol) + "/hist-income-statements"
     params = {"api_key": app_key,
               "start_date": start_date,
               "end_date": end_date,
               "order_by": order_by,
               "columns": columns,
-              "period_type": period_type}
+              "period_type": period_type,
+              "limit": limit}
     request_url = parameterize(host, params)
     response = make_request(request_url)
     return(response)
